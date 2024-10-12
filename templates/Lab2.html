@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body style="background-color: pink;">
+        
+        <title style="font-size:large;color:blueviolet">My Application</title>
+    <form method="POST" action="/">
+        <label style="color:darkcyan" for="nameinput">Name:</label>
+        <input style="color:purple" type="text" id="nameinput" name="name" required>
+        
+        <label style="color:darkcyan" for="idinput">ID:</label>
+        <input style="color:purple" type="number" id="idinput" name="id" required>
+        
+        <button style="color:purple" type="submit">Submit</button>
+    </form>
+    {% if result_name and result_id %}
+    <h2>Welecome, {{ result_name }} {{result_id}}!</h2>
+    {% else %}
+    <h2>Please input your name and ID.</h2>
+    {% endif %}
+    </body>
+</html>
